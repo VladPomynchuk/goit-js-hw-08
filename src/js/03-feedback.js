@@ -26,6 +26,11 @@ if (localStorage.getItem(STORAGE_KEY)) {
 const onSubmitForm = e => {
   e.preventDefault();
 
+  if (email.value === '' || message.value === '') {
+    alert('Все поля должны быть заполнены!!!');
+    return;
+  }
+
   console.log({
     email: email.value,
     message: message.value,
